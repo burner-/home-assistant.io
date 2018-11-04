@@ -14,8 +14,10 @@ ha_qa_scale: internal
 
 The `websocket_api` component set up a WebSocket API and allows one to interact with a Home Assistant instance that is running headless. This component depends on the [`http` component](/components/http/).
 
+Note that websocket authentication has changed. If you need legacy support you need set legacy_api_password support under homeassistant auth_providers configuration. 
+
 <p class='note warning'>
-It is HIGHLY recommended that you set the `api_password`, especially if you are planning to expose your installation to the internet.
+It is HIGHLY recommended that you set the `api_password`, especially if you are planning to expose your installation to the internet. This component take all settings from http component settings. 
 </p>
 
 ## {% linkable_title Configuration %}
